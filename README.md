@@ -31,7 +31,7 @@ Every module ships as a **pair of files**:
 |---|--------|---------|--------|
 | 01 | **NumPy for Quants** | Local Jupyter | ✅ Available |
 | 02 | **Pandas for Financial Data** | Local Jupyter | ✅ Available |
-| 03 | The 5 Pillars of a QuantConnect Algorithm | QuantConnect (LEAN) | 🔜 Planned |
+| 03 | **The 5 Pillars of a QuantConnect Algorithm** | QuantConnect (LEAN) | ✅ Available |
 | 04 | The Research Environment & Working with Financial Data | QuantConnect Research | 🔜 Planned |
 | 05 | Indicators, Signals & Strategy Design Patterns | QuantConnect (LEAN) | 🔜 Planned |
 | 06 | Backtesting Mechanics & Performance Analytics | QuantConnect (LEAN) | 🔜 Planned |
@@ -76,10 +76,13 @@ That's it — no account, no keys. Run the cells top to bottom and do the exerci
 
 ```
 MAT Education/
-├── 01_NumPy_for_Quants.ipynb              # exercise
-├── 01_NumPy_for_Quants_SOLUTIONS.ipynb    # answer key
+├── 01_NumPy_for_Quants.ipynb                                    # exercise
+├── 01_NumPy_for_Quants_SOLUTIONS.ipynb                          # answer key
 ├── 02_Pandas_for_Financial_Data.ipynb
 ├── 02_Pandas_for_Financial_Data_SOLUTIONS.ipynb
+├── 03_Five_Pillars_of_a_QuantConnect_Algorithm.ipynb
+├── 03_Five_Pillars_of_a_QuantConnect_Algorithm_SOLUTIONS.ipynb
+├── TODO.md
 └── README.md
 ```
 
