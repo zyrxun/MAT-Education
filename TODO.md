@@ -8,8 +8,8 @@
 
 ## Milestone 1: QC Core (03–05)
 - [x] 03_Five_Pillars_of_a_QuantConnect_Algorithm
-- [ ] 04_Research_Environment_and_Financial_Data
-- [ ] 05_Indicators_Signals_and_Strategy_Patterns
+- [x] 04_Research_Environment_and_Financial_Data (9/9 checks)
+- [x] 05_Indicators_Signals_and_Strategy_Patterns (8/8 checks)
 
 ## Milestone 2: Evaluation & Research (06–07)
 - [ ] 06_Backtesting_Mechanics_and_Performance
@@ -20,6 +20,10 @@
 - [ ] 09_Algorithm_Framework_Risk_and_Competition
 
 ## Polish
-- [ ] Rename GitHub repo (remove trailing dash from MAT-Education-)
-- [ ] Re-duplicate 01Richard.ipynb from current exercise file (pre-depth-pass copy is stale)
-- [ ] Commit AUTHORING_GUIDE.md to repo
+- [x] Rename GitHub repo (now `zyrxun/MAT-Education`, remote updated)
+- [x] Commit AUTHORING_GUIDE.md to repo
+- [x] ~~Re-duplicate 01Richard.ipynb~~ — **not needed.** The personal copy already
+      matches the depth-passed exercise file cell-for-cell, and its log-returns
+      explanation was *better* than the curriculum's. That text was backported
+      into `build_numpy.py` instead, so NB01 now carries the fuller version.
+- [ ] Note pandas 3.0 vs 2.x (`resample("ME")` vs `"M"`) in the README
