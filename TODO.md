@@ -16,7 +16,7 @@
 - [x] 07_Statistical_Signal_Research (8/8 checks)
 
 ## Milestone 3: ML & Capstone (08–09)
-- [ ] 08_Machine_Learning_for_Alpha
+- [x] 08_Machine_Learning_for_Alpha (8/8 checks)
 - [ ] 09_Algorithm_Framework_Risk_and_Competition
 
 ## Polish
