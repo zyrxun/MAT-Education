@@ -12,8 +12,8 @@
 - [x] 05_Indicators_Signals_and_Strategy_Patterns (8/8 checks)
 
 ## Milestone 2: Evaluation & Research (06–07)
-- [ ] 06_Backtesting_Mechanics_and_Performance
-- [ ] 07_Statistical_Signal_Research
+- [x] 06_Backtesting_Mechanics_and_Performance (9/9 checks)
+- [x] 07_Statistical_Signal_Research (8/8 checks)
 
 ## Milestone 3: ML & Capstone (08–09)
 - [ ] 08_Machine_Learning_for_Alpha
