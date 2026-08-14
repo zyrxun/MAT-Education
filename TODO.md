@@ -26,4 +26,19 @@
       matches the depth-passed exercise file cell-for-cell, and its log-returns
       explanation was *better* than the curriculum's. That text was backported
       into `build_numpy.py` instead, so NB01 now carries the fuller version.
-- [ ] Note pandas 3.0 vs 2.x (`resample("ME")` vs `"M"`) in the README
+- [x] Note pandas 3.0 vs 2.x (`resample("ME")` vs `"M"`) in the README
+- [x] README curriculum table marked 04–09 available; added the local-exercise
+      dependency list (`statsmodels` for 07, `scikit-learn` for 08)
+
+## Curriculum-wide audits (all 9 modules)
+- [x] **Every module ships both files.** 9 exercise + 9 `_SOLUTIONS`, no gaps.
+- [x] **Self-checks pass in every answer key.** Exercise notebooks execute
+      top-to-bottom with zero stray errors, no inline `<details>` reveals.
+- [x] **Section citations resolve.** 11 cross-module + 4 intra-module `§`/Part
+      references checked against real headings. One break found and fixed
+      (Module 9 cited a non-existent "Module 8 §12" → now "Module 8, Part 4").
+- [x] **No unexplained prerequisites.** For every exercise, the symbols the
+      solution uses but the stub does not are all either demonstrated in a
+      teach cell or named in prose, in that module or an earlier one. Same
+      check on ~75 domain concepts (Sharpe, cointegration, purging, leverage,
+      …): none used before the module that defines it.
