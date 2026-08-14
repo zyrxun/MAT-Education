@@ -17,7 +17,7 @@
 
 ## Milestone 3: ML & Capstone (08–09)
 - [x] 08_Machine_Learning_for_Alpha (8/8 checks)
-- [ ] 09_Algorithm_Framework_Risk_and_Competition
+- [x] 09_Algorithm_Framework_Risk_and_Competition (8/8 checks)
 
 ## Polish
 - [x] Rename GitHub repo (now `zyrxun/MAT-Education`, remote updated)
