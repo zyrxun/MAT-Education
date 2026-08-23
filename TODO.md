@@ -1,4 +1,4 @@
-# MAT Education — TODO
+# MAT Education: TODO
 
 ## Milestone 0: Foundations ✅
 - [x] 01_NumPy_for_Quants (exercise + solutions, 10/10 checks)
@@ -22,7 +22,7 @@
 ## Polish
 - [x] Rename GitHub repo (now `zyrxun/MAT-Education`, remote updated)
 - [x] Commit AUTHORING_GUIDE.md to repo
-- [x] ~~Re-duplicate 01Richard.ipynb~~ — **not needed.** The personal copy already
+- [x] ~~Re-duplicate 01Richard.ipynb~~, **not needed.** The personal copy already
       matches the depth-passed exercise file cell-for-cell, and its log-returns
       explanation was *better* than the curriculum's. That text was backported
       into `build_numpy.py` instead, so NB01 now carries the fuller version.

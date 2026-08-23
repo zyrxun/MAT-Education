@@ -1,4 +1,4 @@
-# MAT Education — Notebook Authoring Guide
+# MAT Education: Notebook Authoring Guide
 
 The standard every notebook in the Michigan Traders curriculum must meet. Read this before building or editing any notebook. Builders live in `~/.cache/mat-build/`; deliverables live in `~/claude-workspace/MAT Education/` (git repo → `github.com/zyrxun/MAT-Education`, public).
 
@@ -8,13 +8,13 @@ The standard every notebook in the Michigan Traders curriculum must meet. Read t
 
 **Teach thoroughly. Never dump, never rush.** Specifically:
 
-- **Narrate every worked example.** Before each demo cell, a markdown cell explains *what it does* and *what to notice in the output*. After a surprising result, interpret it. (Bad: a timing cell with no explanation. Good: "the next cell squares a million numbers two ways — a Python loop vs NumPy — and times each; here's why NumPy wins.")
+- **Narrate every worked example.** Before each demo cell, a markdown cell explains *what it does* and *what to notice in the output*. After a surprising result, interpret it. (Bad: a timing cell with no explanation. Good: "the next cell squares a million numbers two ways, a Python loop vs NumPy, and times each; here's why NumPy wins.")
 - **Teach each function/method individually.** Don't list six constructors and show one example. Give each its own short markdown (what it does, signature, when to use it) + its own small example + interpreted output.
 - **One idea per cell.** Prefer several small focused cells over one dense cell. Split "1-D indexing", "2-D indexing", and "the view/copy trap" into separate beats.
 - **Build up before the exercise.** By the time the learner hits a `# TODO`, everything they need has been explained.
 - Audience = intermediate (knows Python + basic stats) but is *learning* the material. Write for someone smart who hasn't seen this tool. Friendly, concrete, finance-framed.
 
-Rule of thumb: a teaching section is usually **2–4 markdown cells + 2–4 small teach cells**, then the exercise trio. NB01 has ~32 teach cells across 10 topics — that's the density to match.
+Rule of thumb: a teaching section is usually **2–4 markdown cells + 2–4 small teach cells**, then the exercise trio. NB01 has ~32 teach cells across 10 topics. That's the density to match.
 
 ---
 
@@ -37,12 +37,12 @@ The answer-key title ends with `· *ANSWER KEY*`.
 
 One builder script per notebook (`build_numpy.py`, `build_pandas.py`, …) using these helpers:
 
-- `md(text)` — markdown cell (role `md`).
-- `teach(code)` — worked-example code cell (role `teach`); outputs get baked.
-- `yourturn(title, task)` — markdown prompt headed `### ✏️ Your turn — {title}`.
-- `exercise(stub, solution)` — code cell that differs by MODE (role `exercise`).
-- `check(code)` — `assert`-based self-check ending in `print("✅ Correct!", ...)` (role `check`).
-- `reveal(solution)` — **no-op** (kept so call sites are harmless; inline answers are gone).
+- `md(text)`: markdown cell (role `md`).
+- `teach(code)`: worked-example code cell (role `teach`); outputs get baked.
+- `yourturn(title, task)`: markdown prompt headed `### ✏️ Your turn: {title}`.
+- `exercise(stub, solution)`: code cell that differs by MODE (role `exercise`).
+- `check(code)`: `assert`-based self-check ending in `print("✅ Correct!", ...)` (role `check`).
+- `reveal(solution)`: **no-op** (kept so call sites are harmless; inline answers are gone).
 
 Each builder takes `MODE` in {`student`, `solution`} and writes straight into the repo folder (`…/NN_Title.ipynb` or `…/NN_Title_SOLUTIONS.ipynb`). Cell dicts need an `id` (nbformat 4.5) and `metadata.mat_role`.
 
@@ -58,13 +58,13 @@ Run e.g. `python3 ~/.cache/mat-build/run_pipeline.py pandas`. Both files for a m
 
 ### Environment
 
-Durable venv at `~/.cache/mat-build/venv` (numpy, pandas, matplotlib, jupyter, nbconvert). Python 3.14 has no system sci-stack; recreate the venv if missing. **Do NOT use `/tmp`** — it gets purged between sessions.
+Durable venv at `~/.cache/mat-build/venv` (numpy, pandas, matplotlib, jupyter, nbconvert). Python 3.14 has no system sci-stack; recreate the venv if missing. **Do NOT use `/tmp`**. It gets purged between sessions.
 
 ---
 
 ## 4. Notebook house structure
 
-1. Title block: `# Michigan Traders — Module N` / `# {Title} · *interactive workbook*`, then Series/Level/Format lines and a short "why this matters" paragraph.
+1. Title block: `# Michigan Traders: Module N` / `# {Title} · *interactive workbook*`, then Series/Level/Format lines and a short "why this matters" paragraph.
 2. **How to use** (the 4-step loop; point to the `_SOLUTIONS` companion).
 3. **Setup** cell (imports, seeded RNG; explain the synthetic data if any).
 4. Numbered topics, each = teaching beats + exercise trio.
@@ -76,7 +76,7 @@ Durable venv at `~/.cache/mat-build/venv` (numpy, pandas, matplotlib, jupyter, n
 
 ## 5. Conventions
 
-- **Foundations (01–02)** run in a plain Jupyter kernel. **QuantConnect modules (03+)** are paste-into-LEAN algorithm code + runnable `QuantBook` research cells — they will NOT run in a local kernel, so those exercises are code-reading / predict-the-output / fill-in-the-pillar (can't always `assert`-validate). Validate QC syntax against live docs (snake_case PEP8 API: `set_start_date`, `on_data`, `set_holdings`; enums UPPER_SNAKE e.g. `Resolution.DAILY`).
+- **Foundations (01–02)** run in a plain Jupyter kernel. **QuantConnect modules (03+)** are paste-into-LEAN algorithm code + runnable `QuantBook` research cells. They will NOT run in a local kernel, so those exercises are code-reading / predict-the-output / fill-in-the-pillar (can't always `assert`-validate). Validate QC syntax against live docs (snake_case PEP8 API: `set_start_date`, `on_data`, `set_holdings`; enums UPPER_SNAKE e.g. `Resolution.DAILY`).
 - **US equities/ETFs only** (SPY, AAPL, TLT, …). No crypto/futures/options.
 - **Seed every RNG** so numbers are reproducible and checks are stable.
 - **pandas 3.0**: `resample("ME")` not `"M"`. End a teach cell on a bare DataFrame for a nice HTML table; use `display()` for multiple tables.
